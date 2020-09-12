@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>goattracker</id>
+    <version>2.74</version>
+    <owners>EmpathicQubit</owners>
+    <title>goattracker (Install)</title>
+    <packageSourceUrl>https://github.com/empathicqubit/empathicqubit-chocolatey<packageSourceUrl>
+    <authors>jaeurnig, loorni</authors>
+    <projectUrl>https://sourceforge.net/projects/goattracker2/</projectUrl>
+    <copyright>2020</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/goattracker2/code/HEAD/tree/</projectSourceUrl>
+    <tags>goattracker goattracker2 music sid tracker goat audio editor loop synth c64 c128 mos commodore</tags>
+    <summary>A SID tracker which can create music programs for systems that use MOS Technology SID chips, including Commodore machines.</summary>
+    <description>A SID tracker which can create music programs for systems that use MOS Technology SID chips, including Commodore machines.</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
