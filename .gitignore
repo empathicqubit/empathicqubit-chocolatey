@@ -4,3 +4,6 @@ syntax: glob
 cc65/caketools/*
 !cc65/caketools/packages.config
 cc65/tools/
+winvice-nightly/caketools/*
+!winvice-nightly/caketools/packages.config
+winvice-nightly/tools/
