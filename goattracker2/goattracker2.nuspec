@@ -9,7 +9,6 @@
     <packageSourceUrl>https://github.com/empathicqubit/empathicqubit-chocolatey</packageSourceUrl>
     <authors>jaeurnig, loorni</authors>
     <projectUrl>https://sourceforge.net/projects/goattracker2/</projectUrl>
-    <copyright>2020</copyright>
     <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://sourceforge.net/p/goattracker2/code/HEAD/tree/</projectSourceUrl>

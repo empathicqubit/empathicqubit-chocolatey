@@ -9,7 +9,6 @@
     <packageSourceUrl>https://github.com/empathicqubit/empathicqubit-chocolatey</packageSourceUrl>
     <authors>oliverschmidt</authors>
     <projectUrl>https://sourceforge.net/projects/cc65/</projectUrl>
-    <copyright>2020</copyright>
     <licenseUrl>https://github.com/cc65/cc65/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/cc65/cc65</projectSourceUrl>
