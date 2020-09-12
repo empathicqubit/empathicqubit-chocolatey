@@ -6,7 +6,7 @@
     <version>2.74</version>
     <owners>EmpathicQubit</owners>
     <title>goattracker (Install)</title>
-    <packageSourceUrl>https://github.com/empathicqubit/empathicqubit-chocolatey<packageSourceUrl>
+    <packageSourceUrl>https://github.com/empathicqubit/empathicqubit-chocolatey</packageSourceUrl>
     <authors>jaeurnig, loorni</authors>
     <projectUrl>https://sourceforge.net/projects/goattracker2/</projectUrl>
     <copyright>2020</copyright>
