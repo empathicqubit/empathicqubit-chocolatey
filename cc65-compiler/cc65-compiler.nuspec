@@ -2,10 +2,10 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>cc65</id>
-    <version>1.0.0.20200911</version>
+    <id>cc65-compiler</id>
+    <version>REPLACEME</version>
     <owners>EmpathicQubit</owners>
-    <title>cc65 (Install)</title>
+    <title>CC65 Compiler (Install)</title>
     <packageSourceUrl>https://github.com/empathicqubit/empathicqubit-chocolatey</packageSourceUrl>
     <authors>oliverschmidt</authors>
     <projectUrl>https://sourceforge.net/projects/cc65/</projectUrl>

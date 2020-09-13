@@ -1,10 +1,11 @@
 syntax: glob
 *.nupkg
 *~
-cc65/caketools/*
-!cc65/caketools/packages.config
-cc65/tools/*
-!cc65/tools/chocolateyInstall.ps1
+cc65-compiler/build
+cc65-compiler/caketools/*
+!cc65-compiler/caketools/packages.config
+cc65-compiler/tools/*
+!cc65-compiler/tools/chocolateyInstall.ps1
 winvice-nightly/caketools/*
 !winvice-nightly/caketools/packages.config
 winvice-nightly/tools/*
