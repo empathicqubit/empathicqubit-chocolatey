@@ -3,7 +3,9 @@ syntax: glob
 *~
 cc65/caketools/*
 !cc65/caketools/packages.config
-cc65/tools/
+cc65/tools/*
+!cc65/tools/chocolateyInstall.ps1
 winvice-nightly/caketools/*
 !winvice-nightly/caketools/packages.config
-winvice-nightly/tools/
+winvice-nightly/tools/*
+!winvice-nightly/tools/chocolateyInstall.ps1
