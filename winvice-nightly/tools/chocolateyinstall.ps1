@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://vice.pokefinder.org/dl.php?file=GTK3VICE-3.4-win64-r38511.zip'
+$url        = 'https://vice.pokefinder.org/dl.php?file=GTK3VICE-3.4-win64-r38522.zip'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   url           = $url
   softwareName  = 'winvice*'
-  checksum      = '00D91BEF37CA4807D6357F039E70259337224819C2B83D09AD2E95681186953C'
+  checksum      = 'A2CC50F1268DF3F1DBD319815CBCD9D501CCD6719C61622B7AB87634C6F82661'
   checksumType  = 'sha256'
   validExitCodes= @(0, 3010, 1641)
 }

@@ -1,4 +1,3 @@
-#addin Cake.FileHelpers
 var version = "2.17";
 var buildDir = "./build/cc65-" + version;
 if(!DirectoryExists(buildDir)) {
@@ -17,8 +16,8 @@ if(DirectoryExists("./tools")) {
     DeleteDirectory("./tools", recursive: true);
 }
 Unzip(buildDir + "/cc65.zip", "./tools");
-var license = FileReadText(buildDir + "/LICENSE");
-FileWriteText("./tools/LICENSE.txt", "From: https://raw.githubusercontent.com/cc65/cc65/master/LICENSE\n\n" + license);
+var license = System.IO.File.ReadAllText(buildDir + "/LICENSE");
+System.IO.File.WriteAllText("./tools/LICENSE.txt", "From: https://raw.githubusercontent.com/cc65/cc65/master/LICENSE\n\n" + license);
 CopyFile("./VERIFICATION.txt", "./tools/VERIFICATION.txt");
 ChocolateyPack("./cc65-compiler.nuspec", new ChocolateyPackSettings {
 	Version = version,
