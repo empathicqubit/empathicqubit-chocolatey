@@ -12,5 +12,8 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 }
 
-Get-ChildItem $toolsDir | Where-Object -Property Name -Like '*GTK3VICE*' | Sort-Object -Property Name -Descending | Remove-Item -Recurse
+Get-ChildItem $toolsDir | Where-Object -Property Name -Like '*GTK3VICE*' | Remove-Item -Recurse
 Install-ChocolateyZipPackage @packageArgs
+$gtkdir = "$((Get-ChildItem $toolsDir | Where-Object -Property Name -Like '*GTK3VICE*').FullName)"
+New-Item -ItemType File "${gtkdir}/bin/gspawn-win64-helper-console.exe.ignore"
+New-Item -ItemType File "${gtkdir}/bin/gspawn-win64-helper.exe.ignore"
