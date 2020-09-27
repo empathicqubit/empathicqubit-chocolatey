@@ -10,3 +10,6 @@ winvice-nightly/caketools/*
 !winvice-nightly/caketools/packages.config
 winvice-nightly/tools/*
 !winvice-nightly/tools/chocolateyInstall.ps1
+bin/
+obj/
+

@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NuspecFile>./winvice-nightly.nuspec</NuspecFile>
+    <NuspecProperties></NuspecProperties>
+    <NuspecBasePath></NuspecBasePath>
+  </PropertyGroup>
+</Project>
