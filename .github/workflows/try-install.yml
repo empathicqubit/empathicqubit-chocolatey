@@ -1,0 +1,15 @@
+name: Test Download
+on:
+  workflow_dispatch:
+      inputs:
+          version:
+              description: The version to try to install
+              required: true
+              default: '3.5.0'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - run: Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+      - run: choco install winvice-nightly --version=${{ github.event.inputs.version }}
