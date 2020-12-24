@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    container: 2.1-nanoserver-2004
     steps:
       - uses: actions/checkout@v2
       - run: cd ./winvice-nightly ; dotnet pack
