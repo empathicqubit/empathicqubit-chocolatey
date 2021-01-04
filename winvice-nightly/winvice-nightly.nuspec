@@ -3,7 +3,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>winvice-nightly</id>
-    <version>3.5-r39493</version>
+    <version>0.0.0.1-REPLACEME</version>
     <packageSourceUrl>https://github.com/empathicqubit/empathicqubit-chocolatey</packageSourceUrl>
     <owners>EmpathicQubit</owners>
     <!-- ============================== -->

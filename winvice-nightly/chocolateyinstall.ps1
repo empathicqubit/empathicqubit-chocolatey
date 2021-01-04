@@ -1,13 +1,17 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿$splits = $env:ChocolateyPackageVersion.Split('-')
+$ver = $splits[0]
+$rev = $splits[1]
+$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/VICE-Team/svn-mirror/releases/download/r39493/GTK3VICE-3.5-win64-r39493.zip'
+$url        = "https://github.com/VICE-Team/svn-mirror/releases/download/$rev/GTK3VICE-$ver-win64-$rev.zip"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   url           = $url
   softwareName  = 'winvice*'
-  checksum      = '289773a81e57230f7142f780e20f1d3b4393a9dc5efd53ebf7587ac727b1c555'
+  checksum      = '<REPLACEME_CHECKSUM>'
   checksumType  = 'sha256'
   validExitCodes= @(0, 3010, 1641)
 }

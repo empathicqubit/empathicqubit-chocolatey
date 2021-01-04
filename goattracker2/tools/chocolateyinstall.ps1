@@ -1,5 +1,4 @@
-﻿$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+﻿$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://pilotfiber.dl.sourceforge.net/project/goattracker2/GoatTracker%202/2.74/GoatTracker_2.74.zip'
 
 $packageArgs = @{
