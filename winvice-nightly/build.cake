@@ -32,6 +32,7 @@ try {
 }
 catch {}
 FileWriteText("./tools/chocolateyinstall.ps1", newText);
+CopyFile("./chocolateyuninstall.ps1", "./tools/chocolateyuninstall.ps1");
 ChocolateyPack("./winvice-nightly.nuspec", new ChocolateyPackSettings {
 	Version = ver + "-" + rev,
 });
