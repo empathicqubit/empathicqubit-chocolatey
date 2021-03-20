@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lsnes</id>
+    <version>2.0.24</version>
+    <owners>EmpathicQubit</owners>
+    <title>lsnes (Install)</title>
+    <packageSourceUrl>https://github.com/empathicqubit/empathicqubit-chocolatey</packageSourceUrl>
+    <authors>Ilari Liusvaara</authors>
+    <projectUrl>http://tasvideos.org/Lsnes.html</projectUrl>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://repo.or.cz/w/lsnes.git</projectSourceUrl>
+    <tags>lsnes rerecording emulator bsnes gambatte game boy snes super nintendo lua tas tasvideos video tool assisted speedrun</tags>
+    <summary>lsnes is SNES rerecording emulator based on bsnes core.</summary>
+    <description>lsnes is SNES rerecording emulator based on bsnes core. It allows you to write Lua scripts to automate playing Super Nintendo (with bsnes) and Game Boy games (with Gambatte)</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
