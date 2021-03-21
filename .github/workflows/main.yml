@@ -17,3 +17,4 @@ jobs:
       - run: Get-Command x64sc
       - run: choco apikey --key ${{ secrets.CHOCO_KEY }} --source https://push.chocolatey.org/
       - run: choco push $(Get-ChildItem winvice-nightly/winvice-nightly*.nupkg).FullName --source https://push.chocolatey.org/
+        if: always()
