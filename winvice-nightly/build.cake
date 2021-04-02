@@ -1,5 +1,5 @@
 #addin nuget:?package=Cake.Http
-#addin nuget:?package=Newtonsoft.Json
+#addin nuget:?package=Newtonsoft.Json&version=12.0.3
 #addin nuget:?package=Cake.FileHelpers
 // JSON.parse($0.textContent)[0].assets.find(x => /win64/i.test(x.name)).browser_download_url
 // https://api.github.com/repos/Vice-Team/svn-mirror/releases?per_page=1
