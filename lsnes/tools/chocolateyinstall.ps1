@@ -12,3 +12,16 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
+
+foreach ($exe in $(Get-ChildItem -Path "$toolsDir" -Filter '*.exe')) {
+	Write-Host "Checking "$exe.Name
+	if(
+		-not @('lsnes-gambatte.exe', 'lsnes-bsnes.exe').Contains($exe.Name)
+		) {
+		continue
+	}
+	Write-Host "Adding shortcut to "$exe.Name
+	Install-ChocolateyShortcut `
+	  -ShortcutFilePath "$([Environment]::GetFolderPath('CommonStartMenu'))/Programs/lsnes/$($exe.BaseName).lnk" `
+	  -TargetPath $exe.FullName
+}
