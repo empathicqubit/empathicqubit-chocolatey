@@ -1,4 +1,4 @@
-var version = "2.17";
+var version = "2.19";
 var buildDir = "./build/cc65-" + version;
 if(!DirectoryExists(buildDir)) {
 	var cc65Zip = DownloadFile("https://github.com/cc65/cc65/archive/V" + version + ".zip");
