@@ -7,11 +7,11 @@ var releasesText = HttpGet("https://api.github.com/repos/Vice-Team/svn-mirror/re
 dynamic releases = Newtonsoft.Json.JsonConvert.DeserializeObject(releasesText);
 dynamic release = releases[0];
 var assets = (IEnumerable<object>)release.assets;
-dynamic asset = assets.First((dynamic x) => new System.Text.RegularExpressions.Regex("-win64-.*\\.zip", System.Text.RegularExpressions.RegexOptions.IgnoreCase).IsMatch((string)x.name));
+dynamic asset = assets.First((dynamic x) => new System.Text.RegularExpressions.Regex("GTK.*-win64-.*\\.zip", System.Text.RegularExpressions.RegexOptions.IgnoreCase).IsMatch((string)x.name));
 
 var url = (string)asset.browser_download_url;
 var name = (string)asset.name;
-var ver = new System.Text.RegularExpressions.Regex("GTK.*-([0-9]+\\.[0-9]+(\\.[0-9]+)?)-").Match(name).Groups[1].Value;
+var ver = new System.Text.RegularExpressions.Regex("-([0-9]+\\.[0-9]+(\\.[0-9]+)?)-").Match(name).Groups[1].Value;
 var rev = (string)release.tag_name;
 
 Information($"URL: {url}");
