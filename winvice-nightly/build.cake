@@ -7,7 +7,7 @@ var releasesText = HttpGet("https://api.github.com/repos/Vice-Team/svn-mirror/re
 dynamic releases = Newtonsoft.Json.JsonConvert.DeserializeObject(releasesText);
 dynamic release = releases[0];
 var assets = (IEnumerable<object>)release.assets;
-dynamic asset = assets.First((dynamic x) => new System.Text.RegularExpressions.Regex("-win64-", System.Text.RegularExpressions.RegexOptions.IgnoreCase).IsMatch((string)x.name));
+dynamic asset = assets.First((dynamic x) => new System.Text.RegularExpressions.Regex("-win64-.*\\.zip", System.Text.RegularExpressions.RegexOptions.IgnoreCase).IsMatch((string)x.name));
 
 var url = (string)asset.browser_download_url;
 var name = (string)asset.name;
