@@ -27,6 +27,7 @@ if(!FileExists(zipFilePath)) {
 }
 var sha = CalculateFileHash(zipFilePath, HashAlgorithm.SHA256).ToHex();
 var newText = FileReadText("./chocolateyinstall.ps1").Replace("<REPLACEME_CHECKSUM>", sha);
+newText = newText.Replace("<REPLACEME_URL>", url);
 try {
 	CreateDirectory("./tools");
 }

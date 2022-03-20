@@ -3,7 +3,7 @@ $ver = $splits[0]
 $rev = $splits[1]
 $ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = "https://github.com/VICE-Team/svn-mirror/releases/download/$rev/GTK3VICE-$ver-win64-$rev.zip"
+$url        = '<REPLACEME_URL>'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
