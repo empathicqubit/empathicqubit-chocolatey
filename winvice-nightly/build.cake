@@ -11,7 +11,7 @@ dynamic asset = assets.First((dynamic x) => new System.Text.RegularExpressions.R
 
 var url = (string)asset.browser_download_url;
 var name = (string)asset.name;
-var ver = new System.Text.RegularExpressions.Regex("-([0-9]+\\.[0-9]+(\\.[0-9]+)?)-").Match(name).Groups[1].Value;
+var ver = new System.Text.RegularExpressions.Regex("GTK.*-([0-9]+\\.[0-9]+(\\.[0-9]+)?)-").Match(name).Groups[1].Value;
 var rev = (string)release.tag_name;
 
 Information($"URL: {url}");
