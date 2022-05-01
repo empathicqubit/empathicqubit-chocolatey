@@ -1,4 +1,4 @@
-name: VICE
+name: AppleWin
 on:
   workflow_dispatch:
   push:
@@ -15,6 +15,6 @@ jobs:
       - run: cd ./winvice-nightly && dotnet tool restore && dotnet cake build.cake 
 
       - run: choco install --prerelease -s ./winvice-nightly winvice-nightly
-      - run: Get-Command x64sc
+      - run: Get-Command AppleWin
       - run: choco push --api-key ${{ secrets.CHOCO_KEY }} $(Get-ChildItem winvice-nightly/winvice-nightly*.nupkg).FullName --source https://push.chocolatey.org/
         if: always()

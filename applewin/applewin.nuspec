@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>applewin</id>
+    <version>0.0.0.1-REPLACEME</version>
+    <packageSourceUrl>https://github.com/empathicqubit/empathicqubit-chocolatey</packageSourceUrl>
+    <owners>EmpathicQubit</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>AppleWin</title>
+    <authors>TomCh, Michael Pohoreski, Andrea Audetto, Kelvin Lee, Nick Westgate, et al.</authors>
+    <projectUrl>https://www.berlios.de/software/applewin/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/AppleWin/AppleWin/master/resource/APPLEWIN.ICO</iconUrl>
+    <licenseUrl>https://github.com/AppleWin/AppleWin/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/AppleWin/AppleWin</projectSourceUrl>
+    <docsUrl>https://github.com/AppleWin/AppleWin</docsUrl>
+    <bugTrackerUrl>https://github.com/AppleWin/AppleWin/issues</bugTrackerUrl>
+    <tags>Apple II AppleWin Emulator apple2</tags>
+    <summary>Apple II emulator for Windows</summary>
+    <description><![CDATA[AppleWin is a fully-featured emulator supporting different Apple II models and clones. A variety of peripheral cards and video display modes are supported (eg. NTSC, RGB); and there's an extensive built-in symbolic debugger.
+]]></description>
+    <releaseNotes>https://github.com/AppleWin/AppleWin/releases</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
