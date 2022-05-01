@@ -12,9 +12,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cd ./winvice-nightly && dotnet tool restore && dotnet cake build.cake 
+      - run: cd ./applewin && dotnet tool restore && dotnet cake build.cake 
 
-      - run: choco install --prerelease -s ./winvice-nightly winvice-nightly
+      - run: choco install --prerelease -s ./applewin applewin
       - run: Get-Command AppleWin
-      - run: choco push --api-key ${{ secrets.CHOCO_KEY }} $(Get-ChildItem winvice-nightly/winvice-nightly*.nupkg).FullName --source https://push.chocolatey.org/
+      - run: choco push --api-key ${{ secrets.CHOCO_KEY }} $(Get-ChildItem applewin/applewin*.nupkg).FullName --source https://push.chocolatey.org/
         if: always()
