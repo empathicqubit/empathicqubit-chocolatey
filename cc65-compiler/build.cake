@@ -14,7 +14,8 @@ if(exitCode != 0) {
 }
 if(DirectoryExists("./tools")) {
     DeleteDirectory("./tools", new DeleteDirectorySettings { 
-		recursive: true
+		Recursive: true,
+		Force: true
 	});
 }
 Unzip(buildDir + "/cc65.zip", "./tools");
