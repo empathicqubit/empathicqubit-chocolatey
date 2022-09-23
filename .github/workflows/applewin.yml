@@ -2,8 +2,8 @@ name: AppleWin
 on:
   workflow_dispatch:
   push:
-    branches:
-      - master
+    paths:
+      - 'applewin/**'
   schedule:
     - cron: '0 0 * * *'
 
