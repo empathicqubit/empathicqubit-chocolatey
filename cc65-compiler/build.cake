@@ -13,7 +13,9 @@ if(exitCode != 0) {
 	throw new Exception("Failure");
 }
 if(DirectoryExists("./tools")) {
-    DeleteDirectory("./tools", recursive: true);
+    DeleteDirectory("./tools", new DeleteDirectorySettings { 
+		recursive: true
+	});
 }
 Unzip(buildDir + "/cc65.zip", "./tools");
 var license = System.IO.File.ReadAllText(buildDir + "/LICENSE");
