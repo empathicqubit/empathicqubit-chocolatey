@@ -2,8 +2,8 @@ name: CC65 Build
 on:
   workflow_dispatch:
   push:
-    branches:
-      - master
+    paths:
+      - 'cc65-compiler/**'
   schedule:
     - cron: '0 0 * * *'
 

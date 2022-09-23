@@ -2,8 +2,8 @@ name: VICE Build
 on:
   workflow_dispatch:
   push:
-    branches:
-      - master
+    paths:
+      - 'winvice-nightly/**'
   schedule:
     - cron: '0 0 * * *'
 
