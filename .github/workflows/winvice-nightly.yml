@@ -1,4 +1,4 @@
-name: VICE
+name: VICE Build
 on:
   workflow_dispatch:
   push:

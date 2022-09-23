@@ -1,0 +1,20 @@
+name: CC65 Build
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd ./cc65-compiler && dotnet tool restore && dotnet cake build.cake 
+
+      - run: choco install --prerelease -s ./cc65-compiler cc65-compiler
+      - run: Get-Command cc65
+      - run: choco push --api-key ${{ secrets.CHOCO_KEY }} $(Get-ChildItem winvice-nightly/cc65-compiler*.nupkg).FullName --source https://push.chocolatey.org/
+        if: always()
