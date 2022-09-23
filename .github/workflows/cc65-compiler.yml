@@ -16,5 +16,5 @@ jobs:
 
       - run: choco install --prerelease -s ./cc65-compiler cc65-compiler
       - run: Get-Command cc65
-      - run: choco push --api-key ${{ secrets.CHOCO_KEY }} $(Get-ChildItem winvice-nightly/cc65-compiler*.nupkg).FullName --source https://push.chocolatey.org/
+      - run: choco push --api-key ${{ secrets.CHOCO_KEY }} $(Get-ChildItem cc65-compiler/cc65-compiler*.nupkg).FullName --source https://push.chocolatey.org/
         if: always()
