@@ -2,12 +2,12 @@ syntax: glob
 *.nupkg
 *~
 build/
-cc65-compiler/caketools/*
-!cc65-compiler/caketools/packages.config
-cc65-compiler/tools/*
-!cc65-compiler/tools/chocolateyInstall.ps1
 *.orig
 *.rej
+
+cc65-compiler/caketools/*
+cc65-compiler/tools/*
+!cc65-compiler/tools/chocolateyInstall.ps1
 
 applewin/caketools/*
 applewin/tools/*
