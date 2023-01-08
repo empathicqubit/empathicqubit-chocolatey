@@ -5,12 +5,19 @@ build/
 *.orig
 *.rej
 
+\[Content_Types\].xml
+_rels/
+core-properties/
+
 cc65-compiler/caketools/*
 cc65-compiler/tools/*
 !cc65-compiler/tools/chocolateyInstall.ps1
 
 applewin/caketools/*
 applewin/tools/*
+
+wabbitemu/caketools/*
+wabbitemu/tools/*
 
 winvice-nightly/caketools/*
 winvice-nightly/tools/*

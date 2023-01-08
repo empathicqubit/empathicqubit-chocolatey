@@ -11,8 +11,8 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: cd ./cc65-compiler && dotnet tool restore && dotnet cake build.cake 
+      - uses: actions/checkout@v3
+      - run: cd ./cc65-compiler && dotnet tool restore && dotnet cake build.cake
 
       - run: choco install --prerelease -s ./cc65-compiler cc65-compiler
       - run: Get-Command cc65
