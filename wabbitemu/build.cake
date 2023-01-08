@@ -3,7 +3,7 @@
 #addin nuget:?package=Cake.FileHelpers&version=5.0.0
 // JSON.parse($0.textContent)[0].assets.find(x => /win64/i.test(x.name)).browser_download_url
 // https://api.github.com/repos/Vice-Team/svn-mirror/releases?per_page=1
-var releasesText = HttpGet("https://api.github.com/repos/sputt/wabbitemu/releases?per_page=1");
+var releasesText = HttpGet("https://api.github.com/repos/empathicqubit/wabbitemu/releases?per_page=1");
 dynamic releases = Newtonsoft.Json.JsonConvert.DeserializeObject(releasesText);
 dynamic release = releases[0];
 var body = (string)release.body;
