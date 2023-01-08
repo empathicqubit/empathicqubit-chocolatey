@@ -1,4 +1,4 @@
-name: VICE Build
+name: Wabbitemu Build
 on:
   workflow_dispatch:
   push:
