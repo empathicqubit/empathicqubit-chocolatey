@@ -23,7 +23,6 @@ if(!FileExists(cacheFilePath)) {
 	var dl = DownloadFile(url);
 	CreateDirectory("./build");
 	MoveFile(dl, cacheFilePath);
-	CopyFile(cacheFilePath, "./tools/" + name);
 }
 var sha = CalculateFileHash(cacheFilePath, HashAlgorithm.SHA256).ToHex();
 var newText = FileReadText("./chocolateyinstall.ps1").Replace("<REPLACEME_CHECKSUM>", sha);
