@@ -12,9 +12,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - run: cd ./wabbitemu && dotnet tool restore && dotnet cake build.cake
+      - run: cd ./wabbitemu && dotnet tool restore && dotnet cake -v Diagnostic build.cake
 
       - run: choco install --prerelease -s ./wabbitemu wabbitemu
       - run: Get-Command wabbitemu
-      - run: choco push --api-key ${{ secrets.CHOCO_KEY }} $(Get-ChildItem winvice-nightly/wabbitemu*.nupkg).FullName --source https://push.chocolatey.org/
+      - run: choco push --api-key ${{ secrets.CHOCO_KEY }} $(Get-ChildItem wabbitemu/wabbitemu*.nupkg).FullName --source https://push.chocolatey.org/
         if: always()
