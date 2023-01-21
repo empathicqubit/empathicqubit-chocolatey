@@ -34,5 +34,5 @@ catch {}
 FileWriteText("./tools/chocolateyinstall.ps1", newText);
 CopyFile("./chocolateyuninstall.ps1", "./tools/chocolateyuninstall.ps1");
 ChocolateyPack("./wabbitemu.nuspec", new ChocolateyPackSettings {
-	Version = ver + "-pre" + DateTime.Now.Ticks.ToString().Substring(0, 15),
+	Version = ver,
 });
