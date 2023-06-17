@@ -1,7 +1,7 @@
-﻿$splits = $env:ChocolateyPackageVersion.Split('-')
+﻿$ErrorActionPreference = 'Stop';
+$splits = $env:ChocolateyPackageVersion.Split('-')
 $ver = $splits[0]
 $rev = $splits[1]
-$ErrorActionPreference = 'Stop';
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
