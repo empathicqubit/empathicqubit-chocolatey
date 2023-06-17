@@ -12,7 +12,7 @@
     <title>WabbitEmu</title>
     <authors>Spencer Putt, Chris Shappell, and James Montelongo</authors>
     <projectUrl>http://wabbitemu.org/</projectUrl>
-    <iconUrl>http://wabbitemu.org/logo.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/empathicqubit/empathicqubit-chocolatey/690e3493e01ce309715c3f0b43702d8300ba04db/wabbitemu/logo.png</iconUrl>
     <licenseUrl>https://github.com/empathicqubit/wabbitemu/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/empathicqubit/wabbitemu</projectSourceUrl>
