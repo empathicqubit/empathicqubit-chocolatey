@@ -1,12 +1,12 @@
 ﻿$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://lsnes.tasbot.net/lsnes-rrtest-1624628005.7z'
+$url        = 'https://lsnes.tasbot.net/lsnes-rr2-beta25.7z'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   url           = $url
   softwareName  = 'lsnes*'
-  checksum      = 'e6295704873ef44762bb6dd3d80f692a345bc13654bf92eaae09183c8030a6ae'
+  checksum      = 'fded149d81387cc7664b199cea111714068888049a2555d4547f169c7a4e0655'
   checksumType  = 'sha256'
   validExitCodes= @(0, 3010, 1641)
 }
