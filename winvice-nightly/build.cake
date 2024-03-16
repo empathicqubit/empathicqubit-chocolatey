@@ -6,7 +6,7 @@
 var useRelease = Argument<bool>("userelease", false);
 var apiUrl = "https://api.github.com/repos/Vice-Team/svn-mirror/releases?per_page=1";
 if(useRelease) {
-	apiUrl = "https://api.github.com/repos/Vice-Team/svn-mirror/releases/latest"
+	apiUrl = "https://api.github.com/repos/Vice-Team/svn-mirror/releases/latest";
 }
 var releasesText = HttpGet(apiUrl);
 dynamic releases = Newtonsoft.Json.JsonConvert.DeserializeObject(releasesText);
