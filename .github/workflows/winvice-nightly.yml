@@ -1,6 +1,11 @@
 name: VICE Build
 on:
   workflow_dispatch:
+    inputs:
+      useRelease:
+        description: 'Use the latest release instead of a snapshot version'
+        type: boolean
+        required: false
   push:
     paths:
       - 'winvice-nightly/**'
@@ -12,7 +17,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - run: cd ./winvice-nightly && dotnet tool restore && dotnet cake build.cake
+      - run: cd ./winvice-nightly && dotnet tool restore && dotnet cake build.cake --userelease=${{ inputs.useRelease && 'true' || 'false' }}
 
       - run: choco install --prerelease -s ./winvice-nightly winvice-nightly
       - run: Get-Command x64sc

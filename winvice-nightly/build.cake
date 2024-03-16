@@ -3,7 +3,12 @@
 #addin nuget:?package=Cake.FileHelpers&version=5.0.0
 // JSON.parse($0.textContent)[0].assets.find(x => /win64/i.test(x.name)).browser_download_url
 // https://api.github.com/repos/Vice-Team/svn-mirror/releases?per_page=1
-var releasesText = HttpGet("https://api.github.com/repos/Vice-Team/svn-mirror/releases?per_page=1");
+var useRelease = Argument<bool>("userelease", false);
+var apiUrl = "https://api.github.com/repos/Vice-Team/svn-mirror/releases?per_page=1";
+if(useRelease) {
+	apiUrl = "https://api.github.com/repos/Vice-Team/svn-mirror/releases/latest"
+}
+var releasesText = HttpGet(apiUrl);
 dynamic releases = Newtonsoft.Json.JsonConvert.DeserializeObject(releasesText);
 dynamic release = releases[0];
 var assets = (IEnumerable<object>)release.assets;
@@ -11,8 +16,13 @@ dynamic asset = assets.First((dynamic x) => new System.Text.RegularExpressions.R
 
 var url = (string)asset.browser_download_url;
 var name = (string)asset.name;
+
 var ver = new System.Text.RegularExpressions.Regex("-([0-9]+\\.[0-9]+(\\.[0-9]+)?)-").Match(name).Groups[1].Value;
 var rev = (string)release.tag_name;
+if(useRelease) {
+	ver = (string)release.tag_name;
+	rev = "";
+}
 
 Information($"URL: {url}");
 Information($"Name: {name}");
@@ -35,5 +45,5 @@ catch {}
 FileWriteText("./tools/chocolateyinstall.ps1", newText);
 CopyFile("./chocolateyuninstall.ps1", "./tools/chocolateyuninstall.ps1");
 ChocolateyPack("./winvice-nightly.nuspec", new ChocolateyPackSettings {
-	Version = ver + "-" + rev,
+	Version = useRelease ? ver : (ver + "-" + rev),
 });
