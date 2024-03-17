@@ -18,7 +18,7 @@ else {
 	release = releases[0];
 }
 var assets = (IEnumerable<object>)release.assets;
-dynamic asset = assets.First((dynamic x) => new System.Text.RegularExpressions.Regex("GTK.*-win64-.*\\.zip", System.Text.RegularExpressions.RegexOptions.IgnoreCase).IsMatch((string)x.name));
+dynamic asset = assets.First((dynamic x) => new System.Text.RegularExpressions.Regex("GTK.*-win64.*\\.zip", System.Text.RegularExpressions.RegexOptions.IgnoreCase).IsMatch((string)x.name));
 
 var url = (string)asset.browser_download_url;
 var name = (string)asset.name;
