@@ -10,7 +10,13 @@ if(useRelease) {
 }
 var releasesText = HttpGet(apiUrl);
 dynamic releases = Newtonsoft.Json.JsonConvert.DeserializeObject(releasesText);
-dynamic release = releases[0];
+dynamic release;
+if(useRelease) {
+	release = releases;
+}
+else {
+	release = releases[0];
+}
 var assets = (IEnumerable<object>)release.assets;
 dynamic asset = assets.First((dynamic x) => new System.Text.RegularExpressions.Regex("GTK.*-win64-.*\\.zip", System.Text.RegularExpressions.RegexOptions.IgnoreCase).IsMatch((string)x.name));
 
